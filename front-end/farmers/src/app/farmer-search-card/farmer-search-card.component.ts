@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FarmerSearchCardComponent implements OnInit {
 
-  value = '';
+  value: string;
 
   constructor() {
 
