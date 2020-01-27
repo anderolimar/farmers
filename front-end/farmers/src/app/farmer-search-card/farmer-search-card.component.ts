@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { FormControl } from '@angular/forms';
 
 @Component({
   // tslint:disable-next-line: component-selector
@@ -6,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './farmer-search-card.component.html',
   styleUrls: ['./farmer-search-card.component.css']
 })
-export class FarmerSearchCardComponent implements OnInit {
+export class FarmerSearchCardComponent {
 
   value: string;
 
@@ -14,7 +15,8 @@ export class FarmerSearchCardComponent implements OnInit {
 
   }
 
-  ngOnInit() {
+  onChange(event: any) {
+    console.log(this.value)
   }
 
 }

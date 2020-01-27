@@ -2,10 +2,9 @@
 
   <p>
     <mat-form-field appearance="legacy">
-      <mat-label>Legacy form field</mat-label>
-      <input matInput placeholder="Placeholder" [(ngModel)]="value" >
-      <mat-icon matSuffix>search</mat-icon>
-      <mat-hint>Hint</mat-hint>
+      <mat-label>Busca</mat-label>
+      <input matInput placeholder="Digite um nome" (keyup)="onChange($event)" [(ngModel)]="value" >
+      <mat-icon matPrefix>search</mat-icon>
     </mat-form-field>
   </p>
 
