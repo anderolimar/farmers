@@ -5,8 +5,24 @@
       <mat-icon matPrefix>search</mat-icon>
       <mat-label>Nome ou Doc#</mat-label>
       <input matInput placeholder="Digite um nome ou documento" (keyup)="onKey($event)" [(ngModel)]="value" >
-      <button mat-button><mat-icon matPosfix>arrow_forward</mat-icon></button>
+      <button mat-button (click)="onClick($event)"><mat-icon matPosfix>arrow_forward</mat-icon></button>
     </mat-form-field>
   </p>
 
 </mat-card>
+
+<div *ngFor="let farmer of farmers" class="search-list-result">
+  <mat-card class="search-result">
+      <p>
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="Destinatario" readonly value="{{ farmer.name }}">
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+            <input matInput placeholder="Doc #" readonly value="{{ farmer.document.documentNumber }}">
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+              <input matInput placeholder="Endereço" readonly value="{{ farmer.address.address }}">
+        </mat-form-field>
+      </p>
+  </mat-card>
+</div>

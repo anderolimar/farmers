@@ -1,5 +1,8 @@
+:host {
+  width: 90%;
+}
 .search-card {
-    width: 300px;
+    width: 90%;
 }
 
 .search-card .mat-form-field {
@@ -11,7 +14,7 @@
 }
 
 .search-card .mat-input-element {
-    width: 88%;
+    width: 93%;
 }
 
 .search-card .mat-button {
@@ -19,5 +22,29 @@
     padding: 0;
     line-height: 20px;
     position: relative;
-    bottom: 6px;    
+    bottom: 6px;
+}
+.search-list-result {
+  width: 100%;
+}
+.search-result {
+  width: 90%;
+  margin-top: 20px;
+}
+
+.search-result .mat-form-field {
+  width: 42%;
+  margin: 0 15px;
+}
+
+
+
+@media only screen and (max-width: 600px)  {
+  .search-card .mat-input-element {
+    width: 85%;
+   }
+
+  .search-result .mat-form-field {
+    width: 90%;
+  }
 }

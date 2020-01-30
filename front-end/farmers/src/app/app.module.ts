@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { FarmerSearchCardComponent } from './farmer-search-card/farmer-search-card.component';
+import { FarmerSearchProvider } from './providers/framer-search-provider';
 import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
@@ -29,7 +30,7 @@ import { FormsModule } from '@angular/forms';
     FormsModule,
     MatButtonModule
   ],
-  providers: [],
+  providers: [ FarmerSearchProvider ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,6 +1,6 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
-import { FormControl } from '@angular/forms';
 import { FarmerSearchAbstractProvider } from '../providers/farmer-search-abstract-provider';
+import { Farmer } from '../model/farmer';
 
 @Component({
   // tslint:disable-next-line: component-selector
@@ -11,10 +11,11 @@ import { FarmerSearchAbstractProvider } from '../providers/farmer-search-abstrac
 export class FarmerSearchCardComponent {
 
   value: string;
-  
+  farmers: Farmer[] = [];
+
   @Input() farmerSearchAbstractProvider: FarmerSearchAbstractProvider;
   @Output() onFarmerSelectedEvent = new EventEmitter();
-  
+
   constructor() {
 
   }
@@ -24,17 +25,18 @@ export class FarmerSearchCardComponent {
       this.searchFarmer();
     }
   }
-  
+
   async onClick(event: any) {
+    console.log('CLICK');
     this.searchFarmer();
-  }  
-  
+  }
+
   async searchFarmer() {
-    console.log(this.value)
     if(this.farmerSearchAbstractProvider) {
       const result = await this.farmerSearchAbstractProvider.searchFarmers({ term: this.value });
+      this.farmers = result;
       this.onFarmerSelectedEvent.emit(result);
-    }    
+    }
   }
 
 }

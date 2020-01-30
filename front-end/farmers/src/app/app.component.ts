@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FarmerSearchProvider } from './providers/framer-search-provider';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'farmers';
+  farmerSearchProvider: FarmerSearchProvider;
+
+  constructor(farmerSearchProvider: FarmerSearchProvider){
+    this.farmerSearchProvider = farmerSearchProvider;
+  }
 }
