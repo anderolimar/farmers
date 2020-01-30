@@ -2,9 +2,10 @@
 
   <p>
     <mat-form-field appearance="legacy">
-      <mat-label>Busca</mat-label>
-      <input matInput placeholder="Digite um nome" (keyup)="onChange($event)" [(ngModel)]="value" >
       <mat-icon matPrefix>search</mat-icon>
+      <mat-label>Nome ou Doc#</mat-label>
+      <input matInput placeholder="Digite um nome ou documento" (keyup)="onKey($event)" [(ngModel)]="value" >
+      <button mat-button><mat-icon matPosfix>arrow_forward</mat-icon></button>
     </mat-form-field>
   </p>
 

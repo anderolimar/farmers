@@ -1,0 +1,23 @@
+.search-card {
+    width: 300px;
+}
+
+.search-card .mat-form-field {
+    width: 100%;
+}
+
+.search-card .mat-icon[matPrefix] {
+    margin-right: 10px;
+}
+
+.search-card .mat-input-element {
+    width: 88%;
+}
+
+.search-card .mat-button {
+    min-width: 30px;
+    padding: 0;
+    line-height: 20px;
+    position: relative;
+    bottom: 6px;    
+}
