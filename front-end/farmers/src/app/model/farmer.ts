@@ -1,3 +1,7 @@
+export interface FarmerList {
+    list: Farmer[];
+}
+
 export interface Farmer {
 
     id: string;
