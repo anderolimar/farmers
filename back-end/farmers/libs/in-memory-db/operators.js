@@ -21,8 +21,8 @@ const Operators = {
       return value.includes(ref);
     },
     "$lk" : (ref, value) => {
-      console.log(`ref: ${ref}, value: ${value} = ${(ref.toLowerCase().indexOf(value) > -1)}`)     
-      return ref.toLowerCase().indexOf(value) > -1;
+      //console.log(`ref: ${ref}, value: ${value} = ${(ref.toLowerCase().indexOf(value.toLowerCase()) > -1)}`)     
+      return ref.toLowerCase().indexOf(value.toLowerCase()) > -1;
     }         
 }
 
