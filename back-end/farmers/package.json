@@ -4,7 +4,7 @@
   "description": "Framers API",
   "main": "index.js",
   "scripts": {
-    "test": "mocha test/**/*-test.js",
+    "test": "mocha test/**/*.spec.js",
     "coverage": "nyc --include='app/**/*.js' --reporter=text mocha test/**/*-test.js",
     "start": "node index.js",
     "start-local": "nodemon node main.js"
@@ -12,7 +12,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "mocha": "^6.1.4",
+    "mocha": "^6.2.2",
     "nodemon": "^1.19.1",
     "nyc": "^14.1.1",
     "proxyquire": "^2.1.0",

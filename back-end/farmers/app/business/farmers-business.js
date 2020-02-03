@@ -1,7 +1,6 @@
-const models = require('../models');
 const FarmersRepository = require('../data').farmers;
 
-class SpaceBusiness {
+class FarmersBusiness {
   static async findByNameOrDocument(term){
     const farmers = await FarmersRepository.getFarmers({ name: term, doc: term });
     return farmers;
@@ -9,4 +8,4 @@ class SpaceBusiness {
 
 }
 
-module.exports = SpaceBusiness;
+module.exports = FarmersBusiness;
