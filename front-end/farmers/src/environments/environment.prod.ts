@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  farmersApiUrl: ''
+  farmersApiUrl: 'http://localhost:3000'
 };

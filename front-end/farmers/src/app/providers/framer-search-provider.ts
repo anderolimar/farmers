@@ -4,8 +4,10 @@ import { SearchParams } from '../model/search-params';
 import { FarmerSearchAbstractProvider } from './farmer-search-abstract-provider';
 import { HttpClient } from '@angular/common/http';
 import { environment } from '../../environments/environment';
+import host from "host-environment";
 
 const searchUrl = `${environment.farmersApiUrl}/farmers?term={term}`
+
 
 @Injectable()
 export class FarmerSearchProvider implements FarmerSearchAbstractProvider {

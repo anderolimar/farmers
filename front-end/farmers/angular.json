@@ -66,10 +66,6 @@
           "options": {
             "browserTarget": "farmers:build"
           },
-          /*"builder": "@angular-builders/dev-server:generic",
-          "options": {
-            "browserTarget": "track-and-trace:build"
-          },*/          
           "configurations": {
             "production": {
               "browserTarget": "farmers:build:production"
